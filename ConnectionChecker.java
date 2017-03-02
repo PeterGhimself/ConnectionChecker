@@ -5,31 +5,8 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.sql.Timestamp;
 import java.util.Date;
-//import java.io.PrintWriter;
-//import java.io.BufferedReader;
-//import java.io.InputStreamReader;
-//import java.util.logging.FileHandler;
-//import java.util.logging.Logger;
 
 public class ConnectionChecker {
-	
-//	public static void runSystemCommand(String command) {
-//
-//	    try {
-//	        Process p = Runtime.getRuntime().exec(command);
-//	        BufferedReader inputStream = new BufferedReader(
-//	                new InputStreamReader(p.getInputStream()));
-//
-//	        String s = "";
-//	        // reading output stream of the command
-//	        while ((s = inputStream.readLine()) != null) {
-//	            System.out.println(s);
-//	        }
-//
-//	    } catch (Exception e) {
-//	        e.printStackTrace();
-//	    }
-//	}
 	
 	public static boolean pingHost(String ipAddress) throws UnknownHostException, IOException{
 	    InetAddress inet = InetAddress.getByName(ipAddress);
@@ -46,12 +23,8 @@ public class ConnectionChecker {
 
 	public static void main(String[] args){
 
-	    String google = "google.com"; //Any IP Address on your network / Web
+	    String google = "google.com";
 	    String myIPaddress = "192.168.2.13";
-		 
-//	    runSystemCommand("ping -n 5 " + localHost);
-//	    runSystemCommand("ping -n 5 " + ip);
-
 	    
 	    long lastTime = System.currentTimeMillis(); 
 	    
@@ -60,8 +33,6 @@ public class ConnectionChecker {
 	    INFINITE_LOOP:
 	    while(true){
 	    	long newTime = System.currentTimeMillis();
-	    	
-//	    	pingHost(localHost);
 	    	
 	    	if(newTime - lastTime > 5000){
 	    		
