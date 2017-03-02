@@ -34,7 +34,7 @@ public class ConnectionChecker {
 	    while(true){
 	    	long newTime = System.currentTimeMillis();
 	    	
-	    	if(newTime - lastTime > 5000){
+	    	if(newTime - lastTime > 1000){
 	    		
 	    		if(lastStatus != internetConnected){
 	    			try{
